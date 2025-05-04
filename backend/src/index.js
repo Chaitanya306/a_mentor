@@ -13,11 +13,11 @@ const PORT=process.env.PORT || 5000;
 let users=null;
 const secret = 'my-secret-key';
 
-/*
+// checking if the server is running
 app.get('/',(req,res)=>{
-    res.send('Hello World!');
+    res.send('The server is running and this id the base route "/" !');
 });
-*/
+
 
 app.post('/signup',async (req,res)=>{
     const {email,password}=req.body;
