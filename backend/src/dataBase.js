@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
  async function connectDB() {
     
     try {
-        let dbconnect=await mongoose.connect(process.env.MONGOURI)
+        const MONGOURI=process.env.MONGOURI;
+        let dbconnect=await mongoose.connect(MONGOURI)
         console.log('MongoDB connected successfully');
         const db = mongoose.connection.db;
         return db
